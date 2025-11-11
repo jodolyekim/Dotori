@@ -2,3 +2,7 @@
 .env.*
 .history/
 
+.env
+.env.*
+.history/
+
