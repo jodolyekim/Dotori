@@ -1,0 +1,282 @@
+[
+  {
+    "model": "dotori_quizzes.quiz",
+    "pk": 1001,
+    "fields": {
+      "qtype": "SITUATION_TEXT",
+      "locale": "ko",
+      "difficulty": "EASY",
+      "prompt_text": "편의점에서 점원이 '영수증 필요하세요?'라고 물었다. 무엇이 맞을까?",
+      "prompt_img": "",
+      "hint_text": "필요하면 '네', 필요 없으면 '아니요'."
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 10011,
+    "fields": {
+      "quiz": 1001,
+      "text": "필요하면 '네'라고 한다",
+      "is_correct": true,
+      "rationale": "질문에 맞게 짧게 대답."
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 10012,
+    "fields": {
+      "quiz": 1001,
+      "text": "영수증을 쓰레기통에 바로 버린다",
+      "is_correct": false,
+      "rationale": ""
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 10013,
+    "fields": {
+      "quiz": 1001,
+      "text": "아무 말도 하지 않는다",
+      "is_correct": false,
+      "rationale": ""
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 10014,
+    "fields": {
+      "quiz": 1001,
+      "text": "점원에게 화를 낸다",
+      "is_correct": false,
+      "rationale": ""
+    }
+  },
+
+  {
+    "model": "dotori_quizzes.quiz",
+    "pk": 2001,
+    "fields": {
+      "qtype": "SITUATION_TEXT",
+      "locale": "ko",
+      "difficulty": "MEDIUM",
+      "prompt_text": "버스에서 아기가 울고 있다. 어떤 행동이 가장 예의 바른가?",
+      "prompt_img": "",
+      "hint_text": "공공장소에서는 조용히 행동하기."
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 20011,
+    "fields": {
+      "quiz": 2001,
+      "text": "조용히 하고 부모를 방해하지 않는다",
+      "is_correct": true,
+      "rationale": "상대를 배려."
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 20012,
+    "fields": {
+      "quiz": 2001,
+      "text": "아기에게 소리친다",
+      "is_correct": false,
+      "rationale": ""
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 20013,
+    "fields": {
+      "quiz": 2001,
+      "text": "영상 소리를 크게 올린다",
+      "is_correct": false,
+      "rationale": ""
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 20014,
+    "fields": {
+      "quiz": 2001,
+      "text": "발로 의자를 찬다",
+      "is_correct": false,
+      "rationale": ""
+    }
+  },
+
+  {
+    "model": "dotori_quizzes.quiz",
+    "pk": 3001,
+    "fields": {
+      "qtype": "SITUATION_IMAGE",
+      "locale": "ko",
+      "difficulty": "HARD",
+      "prompt_text": "도서관에서 친구를 만났다. 어떤 행동이 알맞을까?",
+      "prompt_img": "",
+      "hint_text": "조용한 곳에서는 몸짓으로 인사."
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 30011,
+    "fields": {
+      "quiz": 3001,
+      "text": "작게 손을 흔들고 입모양으로 '안녕'",
+      "image_url": "",
+      "alt_text": "조용히 손 흔드는 사람",
+      "is_correct": true,
+      "rationale": "소음 최소화."
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 30012,
+    "fields": {
+      "quiz": 3001,
+      "text": "큰 소리로 이름을 부른다",
+      "image_url": "",
+      "alt_text": "크게 외치는 사람",
+      "is_correct": false,
+      "rationale": ""
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 30013,
+    "fields": {
+      "quiz": 3001,
+      "text": "스피커폰으로 통화한다",
+      "image_url": "",
+      "alt_text": "스피커 통화",
+      "is_correct": false,
+      "rationale": ""
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 30014,
+    "fields": {
+      "quiz": 3001,
+      "text": "음악을 잠깐 튼다",
+      "image_url": "",
+      "alt_text": "스피커로 음악",
+      "is_correct": false,
+      "rationale": ""
+    }
+  },
+
+  {
+    "model": "dotori_quizzes.quiz",
+    "pk": 4001,
+    "fields": {
+      "qtype": "SENTENCE_MEANING",
+      "locale": "ko",
+      "difficulty": "EASY",
+      "prompt_text": "‘손에 물 한 방울 안 묻히고 산다’의 의미로 가장 알맞은 것은?",
+      "prompt_img": "",
+      "hint_text": "비유적으로 쓰이는 표현이에요."
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 40011,
+    "fields": {
+      "quiz": 4001,
+      "text": "손을 자주 씻지 않는다",
+      "is_correct": false,
+      "rationale": ""
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 40012,
+    "fields": {
+      "quiz": 4001,
+      "text": "집안일을 전혀 하지 않는다",
+      "is_correct": true,
+      "rationale": "비유적으로 '손에 물 한 방울도 안 묻힌다'는 집안일을 전혀 하지 않는다는 뜻이에요."
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 40013,
+    "fields": {
+      "quiz": 4001,
+      "text": "손이 더럽다",
+      "is_correct": false,
+      "rationale": ""
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 40014,
+    "fields": {
+      "quiz": 4001,
+      "text": "요리를 자주 한다",
+      "is_correct": false,
+      "rationale": ""
+    }
+  },
+
+  {
+    "model": "dotori_quizzes.quiz",
+    "pk": 5001,
+    "fields": {
+      "qtype": "SITUATION_IMAGE",
+      "locale": "ko",
+      "difficulty": "EASY",
+      "prompt_text": "친구가 넘어졌을 때 옳은 행동은?",
+      "prompt_img": "",
+      "hint_text": "친구를 배려하는 선택을 고르세요."
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 50011,
+    "fields": {
+      "quiz": 5001,
+      "text": "도망친다",
+      "image_url": "/media/quizzes/running.jpg",
+      "alt_text": "도망가는 사람",
+      "is_correct": false,
+      "rationale": ""
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 50012,
+    "fields": {
+      "quiz": 5001,
+      "text": "도와준다",
+      "image_url": "/media/quizzes/helping.jpg",
+      "alt_text": "도와주는 사람",
+      "is_correct": true,
+      "rationale": "친구가 넘어졌을 땐 웃거나 도망가는 대신 도와주는 것이 올바른 행동이에요."
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 50013,
+    "fields": {
+      "quiz": 5001,
+      "text": "밥을 먹는다",
+      "image_url": "/media/quizzes/eating.jpg",
+      "alt_text": "밥 먹는 사람",
+      "is_correct": false,
+      "rationale": ""
+    }
+  },
+  {
+    "model": "dotori_quizzes.option",
+    "pk": 50014,
+    "fields": {
+      "quiz": 5001,
+      "text": "비웃는다",
+      "image_url": "/media/quizzes/smiling.jpg",
+      "alt_text": "웃는 사람",
+      "is_correct": false,
+      "rationale": ""
+    }
+  }
+]

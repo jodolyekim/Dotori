@@ -1,0 +1,635 @@
+OS 볼륨에 대한 폴더 경로의 목록입니다.
+볼륨 일련 번호는 78B6-F5A1입니다.
+C:.
+|   .env
+|   .gitignore
+|   db.sqlite3
+|   docker-compose.yml
+|   Dockerfile
+|   manage.py
+|   project_tree.txt
+|   README.md
+|   requirements.txt
+|   
++---.history
+|   |   .env_20251111170337
+|   |   .env_20251111170441
+|   |   .env_20251111170639
+|   |   .env_20251111172045
+|   |   .env_20251111172228
+|   |   .env_20251111172416
+|   |   .env_20251111172757
+|   |   .env_20251111173009
+|   |   .env_20251111173023
+|   |   .env_20251111204411
+|   |   .env_20251203010603
+|   |   .env_20251203140624
+|   |   .env_20251203151530
+|   |   .env_20251203151821
+|   |   .env_20251203164650
+|   |   .env_20251203164819
+|   |   .env_20251203193843
+|   |   .env_20251203193944
+|   |   .env_20251203215107
+|   |   .env_20251203215112
+|   |   .env_20251203215946
+|   |   .env_20251203221105
+|   |   .env_20251203222728
+|   |   .env_20251203222730
+|   |   .env_20251203222737
+|   |   .env_20251203222826
+|   |   
+|   +---apps
+|   |   +---dotori_accounts
+|   |   |       jwt_views_20251202153753.py
+|   |   |       jwt_views_20251202153758.py
+|   |   |       jwt_views_20251202154239.py
+|   |   |       models_20251110145002.py
+|   |   |       models_20251202132058.py
+|   |   |       models_20251202134245.py
+|   |   |       models_20251202140224.py
+|   |   |       models_20251202141305.py
+|   |   |       models_20251202142703.py
+|   |   |       serializers_20251110152051.py
+|   |   |       serializers_20251202132048.py
+|   |   |       serializers_20251202132051.py
+|   |   |       serializers_20251202134250.py
+|   |   |       serializers_20251202140230.py
+|   |   |       serializers_20251202141310.py
+|   |   |       serializers_20251202142712.py
+|   |   |       urls_20251110150857.py
+|   |   |       urls_20251202132038.py
+|   |   |       urls_20251202134307.py
+|   |   |       urls_20251202141321.py
+|   |   |       urls_20251202142725.py
+|   |   |       urls_20251202155628.py
+|   |   |       views_20251110152057.py
+|   |   |       views_20251202132043.py
+|   |   |       views_20251202134257.py
+|   |   |       views_20251202140235.py
+|   |   |       views_20251202141315.py
+|   |   |       views_20251202142718.py
+|   |   |       views_20251202155035.py
+|   |   |       views_20251202155613.py
+|   |   |       
+|   |   +---dotori_detector
+|   |   |       bitmind_client_20251203193715.py
+|   |   |       bitmind_client_20251203193730.py
+|   |   |       bitmind_client_20251203203350.py
+|   |   |       bitmind_client_20251203204025.py
+|   |   |       bitmind_client_20251203204935.py
+|   |   |       bitmind_client_20251203204954.py
+|   |   |       bitmind_client_20251203205745.py
+|   |   |       bitmind_client_20251203210430.py
+|   |   |       bitmind_client_20251203210435.py
+|   |   |       bitmind_client_20251203211310.py
+|   |   |       bitmind_client_20251203211637.py
+|   |   |       bitmind_client_20251203214433.py
+|   |   |       bitmind_client_20251203221207.py
+|   |   |       bitmind_client_20251203221247.py
+|   |   |       bitmind_client_20251203221532.py
+|   |   |       hf_client_20251111204040.py
+|   |   |       hf_client_20251111204249.py
+|   |   |       hf_client_20251111210336.py
+|   |   |       hf_client_20251111214324.py
+|   |   |       hf_client_20251111233846.py
+|   |   |       urls_20251111174436.py
+|   |   |       urls_20251111175057.py
+|   |   |       urls_20251111204341.py
+|   |   |       utils_audio_20251111175014.py
+|   |   |       utils_audio_20251111175122.py
+|   |   |       utils_audio_20251111191034.py
+|   |   |       utils_audio_20251111194557.py
+|   |   |       utils_audio_20251111204304.py
+|   |   |       utils_audio_20251111212134.py
+|   |   |       utils_audio_20251203132757.py
+|   |   |       utils_audio_20251203153922.py
+|   |   |       utils_image_20251111174953.py
+|   |   |       utils_image_20251111175103.py
+|   |   |       utils_image_20251111175117.py
+|   |   |       utils_image_20251111191039.py
+|   |   |       utils_image_20251111191749.py
+|   |   |       utils_image_20251111204258.py
+|   |   |       utils_image_20251111213650.py
+|   |   |       utils_image_20251111214332.py
+|   |   |       utils_image_20251111214654.py
+|   |   |       utils_image_20251203132750.py
+|   |   |       utils_image_20251203152808.py
+|   |   |       utils_image_20251203162121.py
+|   |   |       utils_image_20251203193740.py
+|   |   |       utils_image_20251203203426.py
+|   |   |       utils_image_20251203204203.py
+|   |   |       utils_text_20251111174446.py
+|   |   |       utils_text_20251111174548.py
+|   |   |       utils_text_20251111212126.py
+|   |   |       utils_text_20251203132742.py
+|   |   |       utils_text_20251203151540.py
+|   |   |       utils_text_20251203151732.py
+|   |   |       utils_text_20251203151743.py
+|   |   |       utils_text_20251203154456.py
+|   |   |       utils_text_20251203155418.py
+|   |   |       utils_text_20251203160243.py
+|   |   |       utils_text_20251203160640.py
+|   |   |       utils_video_20251111204322.py
+|   |   |       utils_video_20251111205756.py
+|   |   |       utils_video_20251111212143.py
+|   |   |       utils_video_20251203132802.py
+|   |   |       utils_video_20251203153927.py
+|   |   |       utils_video_20251203162130.py
+|   |   |       utils_video_20251203162145.py
+|   |   |       utils_video_20251203193747.py
+|   |   |       views_20251111174440.py
+|   |   |       views_20251111174542.py
+|   |   |       views_20251111175129.py
+|   |   |       views_20251111194656.py
+|   |   |       views_20251111194746.py
+|   |   |       views_20251111195412.py
+|   |   |       views_20251111202958.py
+|   |   |       views_20251111204332.py
+|   |   |       views_20251111205814.py
+|   |   |       views_20251111210328.py
+|   |   |       views_20251111212117.py
+|   |   |       views_20251111212843.py
+|   |   |       views_20251203160656.py
+|   |   |       views_20251203193754.py
+|   |   |       __init___20251111174430.py
+|   |   |       __init___20251111233653.py
+|   |   |       
+|   |   +---dotori_memberships
+|   |   |       apps_20251201224812.py
+|   |   |       apps_20251201225357.py
+|   |   |       models_20251201224812.py
+|   |   |       models_20251202000518.py
+|   |   |       models_20251202000647.py
+|   |   |       models_20251202161103.py
+|   |   |       models_analytics_20251202151437.py
+|   |   |       models_analytics_20251202151447.py
+|   |   |       models_analytics_20251202161119.py
+|   |   |       serializers_20251201224812.py
+|   |   |       serializers_20251202000704.py
+|   |   |       services_20251201224812.py
+|   |   |       services_20251202000658.py
+|   |   |       services_20251202012207.py
+|   |   |       urls_20251201224812.py
+|   |   |       urls_20251202000810.py
+|   |   |       urls_20251202001515.py
+|   |   |       urls_20251202001940.py
+|   |   |       urls_20251202005711.py
+|   |   |       urls_20251202005730.py
+|   |   |       urls_20251202005731.py
+|   |   |       urls_20251202005744.py
+|   |   |       urls_20251202151615.py
+|   |   |       views_20251201224812.py
+|   |   |       views_20251202000712.py
+|   |   |       views_20251202000902.py
+|   |   |       views_20251202001709.py
+|   |   |       views_20251202005702.py
+|   |   |       views_admin_analytics_20251202151530.py
+|   |   |       views_admin_analytics_20251202151537.py
+|   |   |       views_analytics_20251202151503.py
+|   |   |       views_analytics_20251202152458.py
+|   |   |       views_analytics_20251202161131.py
+|   |   |       views_analytics_20251202165754.py
+|   |   |       views_stats_20251202001923.py
+|   |   |       views_stats_20251202001931.py
+|   |   |       views_stats_20251202002003.py
+|   |   |       views_stats_20251202151008.py
+|   |   |       __init___20251201224812.py
+|   |   |       __init___20251202152416.py
+|   |   |       
+|   |   +---dotori_quizzes
+|   |   |   |   admin_20251112001707.py
+|   |   |   |   admin_20251112003750.py
+|   |   |   |   models_20251003135123.py
+|   |   |   |   models_20251112001658.py
+|   |   |   |   selectors_20251112001733.py
+|   |   |   |   selectors_20251112003419.py
+|   |   |   |   serializers_20251112001718.py
+|   |   |   |   serializers_20251112003611.py
+|   |   |   |   serializers_20251112020012.py
+|   |   |   |   serializers_20251112020222.py
+|   |   |   |   services_20251112001741.py
+|   |   |   |   services_20251112003652.py
+|   |   |   |   urls_20251003135123.py
+|   |   |   |   urls_20251112001821.py
+|   |   |   |   urls_20251112003444.py
+|   |   |   |   urls_20251112003500.py
+|   |   |   |   views_20251003135123.py
+|   |   |   |   views_20251112001809.py
+|   |   |   |   views_20251112003437.py
+|   |   |   |   views_20251112020231.py
+|   |   |   |   views_20251202154230.py
+|   |   |   |   views_20251202155024.py
+|   |   |   |   views_20251202155527.py
+|   |   |   |   views_20251202155547.py
+|   |   |   |   
+|   |   |   +---fixtures
+|   |   |   |       quizzes_seed_20251112002019.json
+|   |   |   |       quizzes_seed_20251112003750.json
+|   |   |   |       quizzes_seed_20251112012736.json
+|   |   |   |       quizzes_seed_20251112012750.json
+|   |   |   |       quizzes_seed_20251112012809.json
+|   |   |   |       quizzes_seed_20251112015152.json
+|   |   |   |       quizzes_seed_20251112020726.json
+|   |   |   |       quizzes_seed_20251112020802.json
+|   |   |   |       quizzes_seed_20251112021342.json
+|   |   |   |       quizzes_seed_20251112021834.json
+|   |   |   |       
+|   |   |   +---management
+|   |   |   |   \---commands
+|   |   |   |           seed_quizzes_20251112002102.py
+|   |   |   |           seed_quizzes_20251112002144.py
+|   |   |   |           
+|   |   |   \---tests
+|   |   |           test_quizzes_api_20251112002202.py
+|   |   |           test_quizzes_api_20251112002207.py
+|   |   |           
+|   |   +---dotori_roleplay
+|   |   |       models_20251201124328.py
+|   |   |       models_20251201124333.py
+|   |   |       scenarios_20251201122226.py
+|   |   |       scenarios_20251201122940.py
+|   |   |       serializers_20251201122235.py
+|   |   |       serializers_20251201124551.py
+|   |   |       urls_20251201122247.py
+|   |   |       urls_20251201123119.py
+|   |   |       urls_20251201123229.py
+|   |   |       urls_20251201124400.py
+|   |   |       urls_20251201132516.py
+|   |   |       views_20251201122240.py
+|   |   |       views_20251201124355.py
+|   |   |       views_20251201132504.py
+|   |   |       views_20251201132812.py
+|   |   |       views_20251202161147.py
+|   |   |       views_20251202173107.py
+|   |   |       views_20251202174517.py
+|   |   |       
+|   |   \---dotori_summaries
+|   |           serializers_20251111163218.py
+|   |           serializers_20251202224946.py
+|   |           serializers_20251202230425.py
+|   |           serializers_20251203000210.py
+|   |           serializers_20251203002003.py
+|   |           serializers_20251203002902.py
+|   |           utils_images_20251110224637.py
+|   |           utils_images_20251111173133.py
+|   |           utils_images_20251111173235.py
+|   |           utils_io_20251110172359.py
+|   |           utils_io_20251203000639.py
+|   |           utils_io_20251203000801.py
+|   |           utils_openai_20251110205425.py
+|   |           utils_openai_20251201124821.py
+|   |           utils_openai_20251202224938.py
+|   |           utils_openai_20251203000430.py
+|   |           utils_openai_20251203001950.py
+|   |           utils_openai_20251203002853.py
+|   |           utils_openai_20251203011950.py
+|   |           views_20251111163201.py
+|   |           views_20251202153315.py
+|   |           views_20251202154214.py
+|   |           views_20251202155014.py
+|   |           views_20251202155557.py
+|   |           views_20251202224952.py
+|   |           views_20251202230631.py
+|   |           views_20251202235927.py
+|   |           views_20251203001941.py
+|   |           views_20251203002844.py
+|   |           views_20251203005041.py
+|   |           views_20251203005550.py
+|   |           
+|   +---dotori_core
+|   |       settings_20251110214816.py
+|   |       settings_20251111190353.py
+|   |       settings_20251112003750.py
+|   |       settings_20251112004608.py
+|   |       settings_20251201122310.py
+|   |       settings_20251201225247.py
+|   |       urls_20251110180600.py
+|   |       urls_20251111190401.py
+|   |       urls_20251112003750.py
+|   |       urls_20251201115418.py
+|   |       urls_20251201122336.py
+|   |       urls_20251202005805.py
+|   |       urls_20251202153812.py
+|   |       urls_20251202153914.py
+|   |       
+|   \---dotori_roleplay
+|           apps_20251201122146.py
+|           apps_20251201122157.py
+|           openai_client_20251201122113.py
+|           openai_client_20251201122231.py
+|           scenarios_20251201122104.py
+|           scenarios_20251201122227.py
+|           serializers_20251201122119.py
+|           serializers_20251201122236.py
+|           urls_20251201122133.py
+|           urls_20251201122248.py
+|           views_20251201122124.py
+|           views_20251201122241.py
+|           __init___20251201122055.py
+|           __init___20251201122221.py
+|           
++---apps
+|   +---dotori_accounts
+|   |   |   jwt_views.py
+|   |   |   models.py
+|   |   |   serializers.py
+|   |   |   urls.py
+|   |   |   views.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---migrations
+|   |   |   |   0001_initial.py
+|   |   |   |   0002_profile_phone_phoneverification.py
+|   |   |   |   0003_profile_accessible_mode_profile_difficulty_level_and_more.py
+|   |   |   |   0004_remove_profile_accessible_mode_and_more.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           0001_initial.cpython-313.pyc
+|   |   |           0002_profile_phone_phoneverification.cpython-313.pyc
+|   |   |           0003_profile_accessible_mode_profile_difficulty_level_and_more.cpython-313.pyc
+|   |   |           0004_remove_profile_accessible_mode_and_more.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   \---__pycache__
+|   |           jwt_views.cpython-313.pyc
+|   |           models.cpython-313.pyc
+|   |           serializers.cpython-313.pyc
+|   |           urls.cpython-313.pyc
+|   |           views.cpython-313.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---dotori_common
+|   |   |   utils.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---dotori_detector
+|   |   |   bitmind_client.py
+|   |   |   hf_client.py
+|   |   |   urls.py
+|   |   |   utils_audio.py
+|   |   |   utils_image.py
+|   |   |   utils_text.py
+|   |   |   utils_video.py
+|   |   |   views.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           bitmind_client.cpython-313.pyc
+|   |           hf_client.cpython-313.pyc
+|   |           urls.cpython-313.pyc
+|   |           utils_audio.cpython-313.pyc
+|   |           utils_image.cpython-313.pyc
+|   |           utils_text.cpython-313.pyc
+|   |           utils_video.cpython-313.pyc
+|   |           views.cpython-313.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---dotori_documents
+|   |   |   models.py
+|   |   |   serializers.py
+|   |   |   urls.py
+|   |   |   views.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           models.cpython-313.pyc
+|   |           serializers.cpython-313.pyc
+|   |           urls.cpython-313.pyc
+|   |           views.cpython-313.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---dotori_memberships
+|   |   |   apps.py
+|   |   |   exceptions.py
+|   |   |   models.py
+|   |   |   models_analytics.py
+|   |   |   serializers.py
+|   |   |   services.py
+|   |   |   urls.py
+|   |   |   views.py
+|   |   |   views_admin_analytics.py
+|   |   |   views_analytics.py
+|   |   |   views_stats.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---migrations
+|   |   |   |   0001_initial.py
+|   |   |   |   0002_remove_paymenttransaction_pg_provider_and_more.py
+|   |   |   |   0003_quizattemptlog_summarydetaillog_userloginlog.py
+|   |   |   |   0004_roleplaylog.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           0001_initial.cpython-313.pyc
+|   |   |           0002_remove_paymenttransaction_pg_provider_and_more.cpython-313.pyc
+|   |   |           0003_quizattemptlog_summarydetaillog_userloginlog.cpython-313.pyc
+|   |   |           0004_roleplaylog.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   \---__pycache__
+|   |           apps.cpython-313.pyc
+|   |           exceptions.cpython-313.pyc
+|   |           models.cpython-313.pyc
+|   |           models_analytics.cpython-313.pyc
+|   |           serializers.cpython-313.pyc
+|   |           services.cpython-313.pyc
+|   |           urls.cpython-313.pyc
+|   |           views.cpython-313.pyc
+|   |           views_admin_analytics.cpython-313.pyc
+|   |           views_analytics.cpython-313.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---dotori_quizzes
+|   |   |   admin.py
+|   |   |   consumers.py
+|   |   |   models.py
+|   |   |   selectors.py
+|   |   |   serializers.py
+|   |   |   services.py
+|   |   |   urls.py
+|   |   |   views.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---fixtures
+|   |   |       quizzes_seed.json
+|   |   |       
+|   |   +---management
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---commands
+|   |   |   |       seed_quizzes.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   +---migrations
+|   |   |   |   0001_initial.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           0001_initial.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   +---tests
+|   |   |       test_quizzes_api.py
+|   |   |       
+|   |   \---__pycache__
+|   |           admin.cpython-313.pyc
+|   |           consumers.cpython-313.pyc
+|   |           models.cpython-313.pyc
+|   |           selectors.cpython-313.pyc
+|   |           serializers.cpython-313.pyc
+|   |           services.cpython-313.pyc
+|   |           urls.cpython-313.pyc
+|   |           views.cpython-313.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---dotori_roleplay
+|   |   |   apps.py
+|   |   |   models.py
+|   |   |   openai_client.py
+|   |   |   scenarios.py
+|   |   |   serializers.py
+|   |   |   urls.py
+|   |   |   views.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---migrations
+|   |   |   |   0001_initial.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           0001_initial.cpython-313.pyc
+|   |   |           __init__.cpython-313.pyc
+|   |   |           
+|   |   \---__pycache__
+|   |           apps.cpython-313.pyc
+|   |           models.cpython-313.pyc
+|   |           openai_client.cpython-313.pyc
+|   |           scenarios.cpython-313.pyc
+|   |           serializers.cpython-313.pyc
+|   |           urls.cpython-313.pyc
+|   |           views.cpython-313.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   \---dotori_summaries
+|       |   models.py
+|       |   serializers.py
+|       |   tasks.py
+|       |   urls.py
+|       |   utils_images.py
+|       |   utils_io.py
+|       |   utils_openai.py
+|       |   views.py
+|       |   __init__.py
+|       |   
+|       \---__pycache__
+|               models.cpython-313.pyc
+|               serializers.cpython-313.pyc
+|               urls.cpython-313.pyc
+|               utils_images.cpython-313.pyc
+|               utils_io.cpython-313.pyc
+|               utils_openai.cpython-313.pyc
+|               views.cpython-313.pyc
+|               __init__.cpython-313.pyc
+|               
++---dotori_core
+|   |   asgi.py
+|   |   celery.py
+|   |   middleware.py
+|   |   routing.py
+|   |   settings.py
+|   |   urls.py
+|   |   __init__.py
+|   |   
+|   \---__pycache__
+|           asgi.cpython-313.pyc
+|           celery.cpython-313.pyc
+|           middleware.cpython-313.pyc
+|           routing.cpython-313.pyc
+|           settings.cpython-313.pyc
+|           urls.cpython-313.pyc
+|           __init__.cpython-313.pyc
+|           
++---media
+|   +---ai_images
+|   |       001ebd598d7b44c981e109d638fef0d1.png
+|   |       003c867a5ba844ceace5ee4f97a2c752.png
+|   |       03439f565ef9459294213860af24b70d.png
+|   |       09f3b825aec3465eb5eba56fc01150bf.png
+|   |       0bac06c2aeed456c92a24610d797ef46.png
+|   |       1a74144107684bcdbb15fea28b3853e2.png
+|   |       1b86eb103b074751963e36a68ce2bcee.png
+|   |       1c443a93530b4bb7a80e782d81e8a3be.png
+|   |       1c59a36f650a420b81d7c5e76f850683.png
+|   |       1f49a1c294b14c29bf9a232a53edd84a.png
+|   |       21bc5ea08cde479e9749948c1eddff52.png
+|   |       2a03317569db4861af4b85a2413e9bc4.png
+|   |       2cb5871949c3492c9195169bd8daaf99.png
+|   |       2fbd6647349a4b138670df0132bdab98.png
+|   |       338335770a3845c4a17ded976df6e1c5.png
+|   |       37fc686da9e345c394e750bf15607e82.png
+|   |       394157f1a6964979913ad8ed3baf65bd.png
+|   |       39b9a12d88f340988d5ebd325dc407c8.png
+|   |       3b442c7406934cdc81e0d8b7d6c45dba.png
+|   |       40913517c9fa4413b4c6bb18c6079c28.png
+|   |       42e28adf69ee48c989f40e3fc5773dc8.png
+|   |       45f3deac6ad64b9aa5f41f5b8cfef868.png
+|   |       4811ce2bfd23401fa3f0ac1011812b32.png
+|   |       490b16417cde4e278d589bba2e7f2d82.png
+|   |       4a453ac6c1f84df583db3382bc711f6a.png
+|   |       4bf6c9c0c2bc49e78c68e8ed294b1bcb.png
+|   |       50d8d2e316504a59b23b52c819e30cdd.png
+|   |       5e03247bdfb54df2939a7cfcd6ee4ae6.png
+|   |       611bb36cfd0941208af13b41e2f8e24a.png
+|   |       61bc69bf9a2547d3a9ddbe955d01483f.png
+|   |       63b93c26bd4c4ce4a908a97dbf6c9466.png
+|   |       6843b3613d19409a90ac96b61c7c6885.png
+|   |       767efb3dd7e944bab2a88bb3b9d87c1a.png
+|   |       7757c904dec547c48fc9cf9b5368119e.png
+|   |       7cba64db8c494ddfa0243646ea1540b1.png
+|   |       95b8842f2dc84538baf73f510a1f7c80.png
+|   |       a02b7095795440989f09fda70efcd171.png
+|   |       a68cf368c4f14341a86926d162fd97e1.png
+|   |       a8ef07d687794b8b8bec59dce4ac76c1.png
+|   |       a9c34f1a5b7b4f30a4a99926d6c2f8a8.png
+|   |       aacc8951ecb84c79974fee41d0aa09d9.png
+|   |       ba3a322db67d4e99ae12d6f016f6dfe2.png
+|   |       bde04d8508da416e8cb3a5193bf99a2d.png
+|   |       c0cd195cfc4a4d61959a3badb3f7cbd1.png
+|   |       c35700ed4bfb4c719af306218a26da27.png
+|   |       c3f705eed6c341138e2eb372a38ffe3b.png
+|   |       cc1b7176b8944937a3aa23ac824e2eb7.png
+|   |       ce243e86667b473f98cd742f6e49c9c7.png
+|   |       d40e006b0f9c49789faeb18ae261ff84.png
+|   |       d493c4b7d2b94a6b95649c80ffa17f6a.png
+|   |       d7efeb03a5c6487fb85400be60b5fdeb.png
+|   |       db249140dec24d78b941c3c0eef53dd8.png
+|   |       dcc9689f9c6b4e0480aee247b82f29ce.png
+|   |       df6ccb924bba4d23b7cffa359b30f8d8.png
+|   |       e2ae654d6fdf46ce8be6422a80ab4cf9.png
+|   |       e391a108e8c14d7a99cb23890cf78125.png
+|   |       e5e23556082f419f80107b11444520c4.png
+|   |       e7775dca2d614973b34a75ed103b29b6.png
+|   |       e8e8438facf04b7c8679695f27a433c2.png
+|   |       f6620ee4bc4e4201b7f42ca88bd0a047.png
+|   |       placeholder.png
+|   |       
+|   +---profiles
+|   |       profile.jpg
+|   |       
+|   \---quizzes
+|           eating.jpg
+|           helping.jpg
+|           running.jpg
+|           smiling.jpg
+|           
+\---templates
+        index.html
+        

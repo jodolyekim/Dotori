@@ -1,0 +1,10 @@
+# 환경변수
+.env
+
+# VSCode / 로컬 히스토리
+.history/
+
+# 가상환경
+venv/
+.venv/
+.env/
