@@ -12,7 +12,7 @@ from django.core.files.storage import default_storage
 
 log = logging.getLogger(__name__)
 
-# ─────────────────── 유틸 ───────────────────
+# ── 유틸 ──
 def _clean_env(v: str | None) -> str:
     if not v:
         return ""
@@ -53,7 +53,7 @@ def _map_to_router(url: str) -> str:
         )
     return url
 
-# ─────────────────── ENV 로딩(신/구 키 모두 지원) ───────────────────
+# ── ENV 로딩(신/구 키 모두 지원) ──
 # 토큰
 HF_API_TOKEN = _clean_env(os.getenv("HF_API_TOKEN") or os.getenv("HF_API_KEY"))
 
@@ -78,7 +78,7 @@ def _resolve_api_url() -> str:
         raise RuntimeError("HF_IMAGE_URL 또는 HF_IMAGE_MODEL_ID 설정 필요")
     return _map_to_router(url.strip().rstrip("/"))
 
-# ─────────────────── 메인 ───────────────────
+# ── 메인 ──
 def generate_images_hf(prompt: str, n: int = 4, size: str = "512x512") -> list[str]:
     """
     Hugging Face(Text-to-Image, FLUX 등) 호출

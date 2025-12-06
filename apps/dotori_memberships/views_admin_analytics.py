@@ -21,7 +21,7 @@ class AdminAnalyticsView(APIView):
         today = timezone.localdate()
         last_30 = today - timedelta(days=30)
 
-        # 1) 활성 사용자수 ----------------------------
+        # 1) 활성 사용자수 --
         dau = UserLoginLog.objects.filter(created_at__date=today).count()
         wau = (
             UserLoginLog.objects.filter(created_at__date__gte=today - timedelta(days=7))
@@ -36,7 +36,7 @@ class AdminAnalyticsView(APIView):
             .count()
         )
 
-        # 2) 기능 사용량 ------------------------------
+        # 2) 기능 사용량 
         summary_count = DailyUsage.objects.filter(
             feature_type="SUMMARY",
             date__gte=last_30
@@ -51,7 +51,7 @@ class AdminAnalyticsView(APIView):
             created_at__date__gte=last_30
         ).count()
 
-        # 3) 멤버십 분석 ------------------------------
+        # 3) 멤버십 분석 
         plan_stats = (
             UserMembership.objects.values("plan__code")
             .annotate(count=models.Count("id"))

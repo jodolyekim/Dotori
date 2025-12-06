@@ -20,10 +20,10 @@ from .serializers import (
 )
 from .models import Profile, PhoneVerification, EmailVerification, normalize_phone
 
-# ✅ 분석 로그 모델 import
+# 분석 로그 모델 import
 from apps.dotori_memberships.models_analytics import UserLoginLog
 
-# ✅ 공통 유틸 (CoolSMS)
+# 공통 유틸 (CoolSMS)
 from apps.dotori_common.utils import send_sms_verification_code
 
 User = get_user_model()
@@ -77,7 +77,7 @@ class MyPageProfileView(generics.RetrieveUpdateAPIView):
         return prof
 
 
-# ---------- 휴대폰 인증 ----------
+# 휴대폰 인증
 
 class SendPhoneCodeView(APIView):
     permission_classes = [permissions.AllowAny]
@@ -145,15 +145,15 @@ class VerifyPhoneCodeView(APIView):
 
         pv.attempt_count += 1
 
-        # ---------- 🔥 인증번호 백도어 허용 로직 추가 ----------
+        # 인증번호 백도어 허용 로직 추가(개발용 임시)
         if code == "123456":
-            pass  # OK
+            pass  
         elif pv.code == code:
-            pass  # OK
+            pass  
         else:
             pv.save(update_fields=["attempt_count"])
             return Response({"detail": "인증번호가 올바르지 않습니다."}, status=400)
-        # -----------------------------------------------------
+        #
 
         pv.verified_at = timezone.now()
         pv.save(update_fields=["verified_at", "attempt_count"])
@@ -162,7 +162,7 @@ class VerifyPhoneCodeView(APIView):
         return Response({"ok": True, "phone_verified_token": token}, status=200)
 
 
-# ---------- 이메일 인증 ----------
+# 이메일 인증
 
 class SendEmailCodeView(APIView):
     permission_classes = [permissions.IsAuthenticated]
@@ -208,7 +208,7 @@ class VerifyEmailCodeView(APIView):
 
         ev.attempt_count += 1
 
-        # ---------- 🔥 이메일 인증도 123456 백도어 허용 ----------
+        # 개발용 임시(추후 배포시 삭제하거나 관리자용으로 두기.)
         if code == "123456":
             pass  # OK
         elif ev.code == code:
@@ -216,7 +216,7 @@ class VerifyEmailCodeView(APIView):
         else:
             ev.save(update_fields=["attempt_count"])
             return Response({"detail": "인증번호가 올바르지 않습니다."}, status=400)
-        # ---------------------------------------------------------
+        #
 
         ev.verified_at = timezone.now()
         ev.save(update_fields=["verified_at", "attempt_count"])

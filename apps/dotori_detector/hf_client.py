@@ -60,7 +60,7 @@ def hf_binary_infer(url: str, blob: bytes, timeout: int = 60) -> dict:
 
     # 3) multipart/form-data
     try:
-        boundary = f"----HFForm{uuid.uuid4().hex}"
+        boundary = f"HFForm{uuid.uuid4().hex}"
         files = {"file": ("upload.bin", blob, "application/octet-stream")}
         r = requests.post(url, headers=h_auth, files=files, timeout=timeout)
         if r.status_code < 400:

@@ -1,0 +1,151 @@
+Date : 2025-12-06 16:16:32
+Directory : c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend
+Total : 95 files,  5591 codes, 900 comments, 1152 blanks, all 7643 lines
+
+Languages
++--++++++
+| language         | files      | code       | comment    | blank      | total      |
++--++++++
+| Python           |         88 |      4,496 |        900 |      1,122 |      6,518 |
+| MS SQL           |          1 |        488 |          0 |         17 |        505 |
+| JSON             |          1 |        278 |          0 |          5 |        283 |
+| pip requirements |          1 |        255 |          0 |          1 |        256 |
+| YAML             |          1 |         30 |          0 |          1 |         31 |
+| HTML             |          1 |         19 |          0 |          2 |         21 |
+| Markdown         |          1 |         17 |          0 |          3 |         20 |
+| Docker           |          1 |          8 |          0 |          1 |          9 |
++--++++++
+
+Directories
++-++++++
+| path                                                                                                                                                          | files      | code       | comment    | blank      | total      |
++-++++++
+| .                                                                                                                                                             |         95 |      5,591 |        900 |      1,152 |      7,643 |
+| . (Files)                                                                                                                                                     |          6 |        805 |          1 |         24 |        830 |
+| apps                                                                                                                                                          |         81 |      4,574 |        840 |      1,081 |      6,495 |
+| apps\dotori_accounts                                                                                                                                          |         11 |        655 |         43 |        183 |        881 |
+| apps\dotori_accounts (Files)                                                                                                                                  |          6 |        506 |         39 |        157 |        702 |
+| apps\dotori_accounts\migrations                                                                                                                               |          5 |        149 |          4 |         26 |        179 |
+| apps\dotori_common                                                                                                                                            |          2 |         67 |         15 |         20 |        102 |
+| apps\dotori_detector                                                                                                                                          |         11 |      1,003 |        173 |        271 |      1,447 |
+| apps\dotori_documents                                                                                                                                         |          5 |         47 |          0 |          6 |         53 |
+| apps\dotori_memberships                                                                                                                                       |         17 |      1,245 |        231 |        312 |      1,788 |
+| apps\dotori_memberships (Files)                                                                                                                               |         12 |      1,042 |        227 |        286 |      1,555 |
+| apps\dotori_memberships\migrations                                                                                                                            |          5 |        203 |          4 |         26 |        233 |
+| apps\dotori_quizzes                                                                                                                                           |         16 |        610 |         50 |         80 |        740 |
+| apps\dotori_quizzes (Files)                                                                                                                                   |          9 |        249 |         46 |         60 |        355 |
+| apps\dotori_quizzes\fixtures                                                                                                                                  |          1 |        278 |          0 |          5 |        283 |
+| apps\dotori_quizzes\management                                                                                                                                |          3 |         11 |          0 |          5 |         16 |
+| apps\dotori_quizzes\management (Files)                                                                                                                        |          1 |          0 |          0 |          1 |          1 |
+| apps\dotori_quizzes\management\commands                                                                                                                       |          2 |         11 |          0 |          4 |         15 |
+| apps\dotori_quizzes\migrations                                                                                                                                |          2 |         52 |          1 |          8 |         61 |
+| apps\dotori_quizzes\tests                                                                                                                                     |          1 |         20 |          3 |          2 |         25 |
+| apps\dotori_roleplay                                                                                                                                          |         10 |        288 |        164 |         68 |        520 |
+| apps\dotori_roleplay (Files)                                                                                                                                  |          8 |        260 |        163 |         60 |        483 |
+| apps\dotori_roleplay\migrations                                                                                                                               |          2 |         28 |          1 |          8 |         37 |
+| apps\dotori_summaries                                                                                                                                         |          9 |        659 |        164 |        141 |        964 |
+| dotori_core                                                                                                                                                   |          7 |        193 |         59 |         45 |        297 |
+| templates                                                                                                                                                     |          1 |         19 |          0 |          2 |         21 |
++-++++++
+
+Files
++-+--+++++
+| filename                                                                                                                                                      | language         | code       | comment    | blank      | total      |
++-+--+++++
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\Dockerfile                                                                                        | Docker           |          8 |          0 |          1 |          9 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\README.md                                                                                         | Markdown         |         17 |          0 |          3 |         20 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_accounts\__init__.py                                                                  | Python           |          0 |          0 |          1 |          1 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_accounts\jwt_views.py                                                                 | Python           |         33 |         10 |         11 |         54 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_accounts\migrations\0001_initial.py                                                   | Python           |         19 |          1 |          7 |         27 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_accounts\migrations\0002_profile_phone_phoneverification.py                           | Python           |         28 |          1 |          6 |         35 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_accounts\migrations\0003_profile_accessible_mode_profile_difficulty_level_and_more.py | Python           |         42 |          1 |          6 |         49 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_accounts\migrations\0004_remove_profile_accessible_mode_and_more.py                   | Python           |         60 |          1 |          6 |         67 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_accounts\migrations\__init__.py                                                       | Python           |          0 |          0 |          1 |          1 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_accounts\models.py                                                                    | Python           |         95 |          7 |         25 |        127 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_accounts\serializers.py                                                               | Python           |         90 |          5 |         23 |        118 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_accounts\urls.py                                                                      | Python           |         31 |          7 |          8 |         46 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_accounts\views.py                                                                     | Python           |        257 |         10 |         89 |        356 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_common\__init__.py                                                                    | Python           |          0 |          0 |          1 |          1 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_common\utils.py                                                                       | Python           |         67 |         15 |         19 |        101 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_detector\__init__.py                                                                  | Python           |          1 |          1 |          1 |          3 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_detector\bitmind_client.py                                                            | Python           |        176 |         20 |         47 |        243 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_detector\hf_client.py                                                                 | Python           |        112 |         27 |         18 |        157 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_detector\sightengine_client.py                                                        | Python           |         49 |          9 |         18 |         76 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_detector\urls.py                                                                      | Python           |          8 |          0 |          2 |         10 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_detector\utils_audio.py                                                               | Python           |        148 |         37 |         32 |        217 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_detector\utils_image.py                                                               | Python           |         96 |          3 |         28 |        127 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_detector\utils_image_local_ai.py                                                      | Python           |         30 |         11 |         14 |         55 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_detector\utils_text.py                                                                | Python           |        121 |         38 |         34 |        193 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_detector\utils_video.py                                                               | Python           |        101 |         15 |         34 |        150 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_detector\views.py                                                                     | Python           |        161 |         12 |         43 |        216 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_documents\__init__.py                                                                 | Python           |          0 |          0 |          1 |          1 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_documents\models.py                                                                   | Python           |         11 |          0 |          1 |         12 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_documents\serializers.py                                                              | Python           |          7 |          0 |          1 |          8 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_documents\urls.py                                                                     | Python           |          5 |          0 |          1 |          6 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_documents\views.py                                                                    | Python           |         24 |          0 |          2 |         26 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\__init__.py                                                               | Python           |          0 |          1 |          1 |          2 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\apps.py                                                                   | Python           |          5 |          0 |          4 |          9 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\exceptions.py                                                             | Python           |         12 |          2 |          6 |         20 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\migrations\0001_initial.py                                                | Python           |         89 |          1 |          7 |         97 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\migrations\0002_remove_paymenttransaction_pg_provider_and_more.py         | Python           |         52 |          1 |          6 |         59 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\migrations\0003_quizattemptlog_summarydetaillog_userloginlog.py           | Python           |         42 |          1 |          6 |         49 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\migrations\0004_roleplaylog.py                                            | Python           |         20 |          1 |          6 |         27 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\migrations\__init__.py                                                    | Python           |          0 |          0 |          1 |          1 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\models.py                                                                 | Python           |        109 |         12 |         35 |        156 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\models_analytics.py                                                       | Python           |         32 |         12 |         16 |         60 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\serializers.py                                                            | Python           |         30 |          0 |         12 |         42 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\services.py                                                               | Python           |        210 |         51 |         71 |        332 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\urls.py                                                                   | Python           |         40 |          8 |          9 |         57 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\views.py                                                                  | Python           |        209 |         69 |         52 |        330 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\views_admin_analytics.py                                                  | Python           |         61 |          4 |         14 |         79 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\views_analytics.py                                                        | Python           |        204 |         28 |         39 |        271 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_memberships\views_stats.py                                                            | Python           |        130 |         40 |         27 |        197 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\__init__.py                                                                   | Python           |          0 |          0 |          1 |          1 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\admin.py                                                                      | Python           |         11 |          0 |          3 |         14 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\consumers.py                                                                  | Python           |         18 |          0 |          1 |         19 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\fixtures\quizzes_seed.json                                                    | JSON             |        278 |          0 |          5 |        283 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\management\__init__.py                                                        | Python           |          0 |          0 |          1 |          1 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\management\commands\__init__.py                                               | Python           |          0 |          0 |          1 |          1 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\management\commands\seed_quizzes.py                                           | Python           |         11 |          0 |          3 |         14 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\migrations\0001_initial.py                                                    | Python           |         52 |          1 |          7 |         60 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\migrations\__init__.py                                                        | Python           |          0 |          0 |          1 |          1 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\models.py                                                                     | Python           |         38 |          1 |          8 |         47 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\selectors.py                                                                  | Python           |         19 |          6 |          5 |         30 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\serializers.py                                                                | Python           |         45 |         14 |         15 |         74 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\services.py                                                                   | Python           |         25 |          9 |          6 |         40 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\tests\test_quizzes_api.py                                                     | Python           |         20 |          3 |          2 |         25 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\urls.py                                                                       | Python           |          6 |          1 |          2 |          9 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_quizzes\views.py                                                                      | Python           |         87 |         15 |         19 |        121 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_roleplay\__init__.py                                                                  | Python           |          1 |          1 |          2 |          4 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_roleplay\apps.py                                                                      | Python           |          5 |          1 |          4 |         10 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_roleplay\migrations\0001_initial.py                                                   | Python           |         28 |          1 |          7 |         36 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_roleplay\migrations\__init__.py                                                       | Python           |          0 |          0 |          1 |          1 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_roleplay\models.py                                                                    | Python           |         22 |          4 |          8 |         34 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_roleplay\openai_client.py                                                             | Python           |         35 |          4 |         11 |         50 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_roleplay\scenarios.py                                                                 | Python           |        116 |          3 |         11 |        130 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_roleplay\serializers.py                                                               | Python           |          9 |         19 |          5 |         33 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_roleplay\urls.py                                                                      | Python           |          7 |          1 |          3 |         11 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_roleplay\views.py                                                                     | Python           |         65 |        130 |         16 |        211 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_summaries\__init__.py                                                                 | Python           |          0 |          0 |          1 |          1 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_summaries\models.py                                                                   | Python           |          9 |          0 |          3 |         12 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_summaries\serializers.py                                                              | Python           |         57 |         11 |         19 |         87 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_summaries\tasks.py                                                                    | Python           |         21 |          0 |          1 |         22 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_summaries\urls.py                                                                     | Python           |          7 |          2 |          4 |         13 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_summaries\utils_images.py                                                             | Python           |         96 |         24 |         18 |        138 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_summaries\utils_io.py                                                                 | Python           |         32 |          1 |          5 |         38 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_summaries\utils_openai.py                                                             | Python           |        296 |         62 |         54 |        412 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\apps\dotori_summaries\views.py                                                                    | Python           |        141 |         64 |         36 |        241 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\db.sqlite3                                                                                        | MS SQL           |        488 |          0 |         17 |        505 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\docker-compose.yml                                                                                | YAML             |         30 |          0 |          1 |         31 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\dotori_core\__init__.py                                                                           | Python           |          2 |          0 |          1 |          3 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\dotori_core\asgi.py                                                                               | Python           |         11 |          0 |          2 |         13 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\dotori_core\celery.py                                                                             | Python           |          6 |          0 |          1 |          7 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\dotori_core\middleware.py                                                                         | Python           |         14 |          3 |          3 |         20 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\dotori_core\routing.py                                                                            | Python           |          5 |          0 |          2 |          7 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\dotori_core\settings.py                                                                           | Python           |        126 |         47 |         22 |        195 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\dotori_core\urls.py                                                                               | Python           |         29 |          9 |         14 |         52 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\manage.py                                                                                         | Python           |          7 |          1 |          1 |          9 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\requirements.txt                                                                                  | pip requirements |        255 |          0 |          1 |        256 |
+| c:\Users\joy14_hq\Desktop\Graduation Project\dotori_backend\templates\index.html                                                                              | HTML             |         19 |          0 |          2 |         21 |
+| Total                                                                                                                                                         |                  |      5,591 |        900 |      1,152 |      7,643 |
++-+--+++++

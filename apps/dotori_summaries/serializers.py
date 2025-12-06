@@ -27,15 +27,15 @@ class SummarizeRequestSerializer(serializers.Serializer):
         image = data.get("image")
         image_b64 = data.get("image_base64")
 
-        # -------------------------------
+    
         # 최소 하나는 필요
-        # -------------------------------
+    
         if not (text or image or image_b64):
             raise serializers.ValidationError("text 또는 image 중 하나는 필요합니다.")
 
-        # -------------------------------
+    
         # base64 → InMemoryUploadedFile 변환
-        # -------------------------------
+    
         if image_b64 and not image:
             try:
                 raw_b64 = image_b64

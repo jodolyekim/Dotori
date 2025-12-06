@@ -11,7 +11,7 @@ from .views import (
     FeatureConsumeView,
 )
 
-# 🔥 분석 기능 import (새 파일)
+#  분석 기능 import (새 파일)
 from .views_analytics import UserAnalyticsView
 from .views_admin_analytics import AdminAnalyticsView
 
@@ -36,9 +36,9 @@ urlpatterns = [
         name="consume-feature",
     ),
 
-    # ============================
-    #   🔥 새로 추가된 "분석 기능"
-    # ============================
+    # ===
+    #    새로 추가된 "분석 기능"
+    # ===
 
     # 1) 사용자 개인 분석 데이터(API)
     path(

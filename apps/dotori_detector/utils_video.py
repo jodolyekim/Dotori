@@ -12,9 +12,9 @@ from .utils_image import _normalize_probability
 log = logging.getLogger(__name__)
 
 
-# ---------------------------------------------------------
-# 🔥 안정적인 프레임 추출 (OpenCV VideoCapture)
-# ---------------------------------------------------------
+#
+#  안정적인 프레임 추출 (OpenCV VideoCapture)
+#
 def extract_frames_opencv(video_bytes: bytes, num_frames: int = 8) -> List[np.ndarray]:
     frames = []
 
@@ -50,9 +50,9 @@ def extract_frames_opencv(video_bytes: bytes, num_frames: int = 8) -> List[np.nd
     return frames
 
 
-# ---------------------------------------------------------
-# 🔥 프레임마다 AI 탐지 → 평균 확률 계산
-# ---------------------------------------------------------
+#
+#  프레임마다 AI 탐지 → 평균 확률 계산
+#
 def _call_local_video_detector(video_bytes: bytes) -> Dict[str, Any]:
     out = {
         "source": "local_video_ai",
@@ -100,9 +100,9 @@ def _call_local_video_detector(video_bytes: bytes) -> Dict[str, Any]:
     return out
 
 
-# ---------------------------------------------------------
-# 🔥 views.py와 호환되는 detect_video_ai()
-# ---------------------------------------------------------
+#
+#  views.py와 호환되는 detect_video_ai()
+#
 def detect_video_ai(file_obj) -> Tuple[Optional[float], Dict[str, Any]]:
     pos = file_obj.tell()
     blob = file_obj.read()
@@ -124,9 +124,9 @@ def detect_video_ai(file_obj) -> Tuple[Optional[float], Dict[str, Any]]:
     return score, detail
 
 
-# ---------------------------------------------------------
-# 🔥 views.py가 그대로 사용 가능한 API 구조 유지
-# ---------------------------------------------------------
+#
+#  views.py가 그대로 사용 가능한 API 구조 유지
+#
 def video_detector_score(file_obj) -> Tuple[Optional[float], Dict[str, Any]]:
     score, base_detail = detect_video_ai(file_obj)
     se = base_detail["sources"][0]

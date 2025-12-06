@@ -32,9 +32,9 @@ class UserAnalyticsView(APIView):
         last_30 = today - timedelta(days=30)
         recent_7 = today - timedelta(days=7)
 
-        # -------------------------------------------------
+    
         # 0) 요약 사용 분석: 난이도별
-        # -------------------------------------------------
+    
         summary_usage_raw = DailyUsage.objects.filter(
             user=user,
             date__gte=last_30,
@@ -60,9 +60,9 @@ class UserAnalyticsView(APIView):
             )
         }
 
-        # -------------------------------------------------
+    
         # 1) 퀴즈/사고력 분석
-        # -------------------------------------------------
+    
         quiz_qs = QuizAttemptLog.objects.filter(
             user=user,
             created_at__date__gte=last_30,
@@ -121,9 +121,9 @@ class UserAnalyticsView(APIView):
                     weakest_ratio = ratio
                     weakest = entry
 
-        # -------------------------------------------------
+    
         # 2) 롤플레잉 분석
-        # -------------------------------------------------
+    
         rp_qs = RoleplayLog.objects.filter(
             user=user,
             created_at__date__gte=last_30,
@@ -159,9 +159,9 @@ class UserAnalyticsView(APIView):
         lengths = list(rp_qs.values_list("user_utterance_len", flat=True))
         avg_len = sum(lengths) / len(lengths) if lengths else 0
 
-        # -------------------------------------------------
+    
         # 3) 이용 패턴 분석
-        # -------------------------------------------------
+    
         usage_datetimes = (
             list(quiz_qs.values_list("created_at", flat=True))
             + list(rp_qs.values_list("created_at", flat=True))
@@ -195,9 +195,9 @@ class UserAnalyticsView(APIView):
         else:
             usage_summary_line = "아직 충분한 사용 기록이 없습니다."
 
-        # -------------------------------------------------
+    
         # 4) 리포트 카드
-        # -------------------------------------------------
+    
         prev_quiz_count = QuizAttemptLog.objects.filter(
             user=user,
             created_at__date__lt=last_30,
@@ -231,12 +231,12 @@ class UserAnalyticsView(APIView):
         if streak_days >= 3:
             report_cards.append(f"연속 {streak_days}일 이상 활동했어요! 대단해요 🏅")
 
-        # -------------------------------------------------
+    
         # Response JSON
-        # -------------------------------------------------
+    
         return Response(
             {
-                "summary_usage": summary_usage,  # 🔥 NEW
+                "summary_usage": summary_usage,  #  NEW
                 "quiz": {
                     "total": total_quiz,
                     "total_solved": total_quiz,

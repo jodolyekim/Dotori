@@ -2,9 +2,9 @@ from rest_framework import serializers
 from .models import Quiz, Option
 
 
-# ──────────────────────────────
+# 
 # 절대 URL 변환 유틸
-# ──────────────────────────────
+# 
 def _abs_url(request, url: str | None) -> str:
     """상대 URL을 절대 URL로 변환"""
     if not url:
@@ -14,9 +14,9 @@ def _abs_url(request, url: str | None) -> str:
     return request.build_absolute_uri(url) if request else url
 
 
-# ──────────────────────────────
+# 
 # 보기 (Option)
-# ──────────────────────────────
+# 
 class OptionPublicSerializer(serializers.ModelSerializer):
     image_url = serializers.SerializerMethodField()
 
@@ -31,9 +31,9 @@ class OptionPublicSerializer(serializers.ModelSerializer):
         fields = ("id", "text", "image_url", "alt_text")
 
 
-# ──────────────────────────────
+# 
 # 퀴즈 (Quiz)
-# ──────────────────────────────
+# 
 class QuizPublicSerializer(serializers.ModelSerializer):
     options = OptionPublicSerializer(many=True)
     prompt_img = serializers.SerializerMethodField()
@@ -57,9 +57,9 @@ class QuizPublicSerializer(serializers.ModelSerializer):
         )
 
 
-# ──────────────────────────────
+# 
 # 정답 제출용 Serializer
-# ──────────────────────────────
+# 
 class SubmitSerializer(serializers.Serializer):
     quiz_id = serializers.IntegerField()
     option_id = serializers.IntegerField()

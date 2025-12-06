@@ -34,9 +34,9 @@ def _get_today() -> date:
   return timezone.localdate()
 
 
-# -----------------------------------------
+# 
 # 1. 요금제 SEED (BASIC / PLUS / PREMIUM)
-# -----------------------------------------
+# 
 
 _PLANS_INITIALIZED = False
 
@@ -110,9 +110,9 @@ def get_default_plan() -> MembershipPlan:
   return MembershipPlan.objects.get(code=BASIC)
 
 
-# -----------------------------------------
+# 
 # 2. 멤버십 / 지갑 헬퍼
-# -----------------------------------------
+# 
 
 
 def get_or_create_membership(user) -> UserMembership:
@@ -151,9 +151,9 @@ def get_wallet(user) -> PointWallet:
 get_or_create_wallet = get_wallet
 
 
-# -----------------------------------------
+# 
 # 3. 사용량 한도 체크 / 소비
-# -----------------------------------------
+# 
 
 
 def _get_limit_from_plan(plan: MembershipPlan, feature_type: str) -> int | None:
@@ -227,9 +227,9 @@ def consume_usage(user, feature_type: str, count: int = 1) -> UsageCheckResult:
   return UsageCheckResult(ok=True, remaining=remaining, used_today=usage.used_count)
 
 
-# -----------------------------------------
+# 
 # 4. 포인트 적립 / 차감
-# -----------------------------------------
+# 
 
 
 @transaction.atomic

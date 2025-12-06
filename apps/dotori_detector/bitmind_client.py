@@ -6,9 +6,9 @@ from typing import Any, Dict, Optional, Tuple
 import requests
 
 
-# ─────────────────────────────────────
+# 
 # 환경변수 로드
-# ─────────────────────────────────────
+# 
 BITMIND_API_KEY_RAW = os.getenv("BITMIND_API_KEY", "").strip()
 
 # BitMind 키가 "id:secret" 형식일 수 있어서 secret만 사용
@@ -41,12 +41,12 @@ print(f"BITMIND_MODEL_ID   : {BITMIND_MODEL_ID}")
 print(f"BITMIND_APP_ID     : {BITMIND_APP_ID}")
 print(f"BITMIND_IMAGE_URL  : {BITMIND_IMAGE_URL}")
 print(f"BITMIND_VIDEO_URL  : {BITMIND_VIDEO_URL}")
-print("===================================")
+print("")
 
 
-# ─────────────────────────────────────
+# 
 # 공통 헤더
-# ─────────────────────────────────────
+# 
 def _auth_headers() -> Dict[str, str]:
     if not BITMIND_API_KEY:
         raise RuntimeError("BITMIND_API_KEY is not set")
@@ -64,7 +64,7 @@ def _auth_headers() -> Dict[str, str]:
         "Authorization": f"Bearer {masked}",
         "x-bitmind-application": BITMIND_APP_ID,
     })
-    print("====================================")
+    print("=")
 
     return headers
 
@@ -130,9 +130,9 @@ def _extract_score_label(raw: Dict[str, Any]) -> Tuple[Optional[float], str, Opt
     return score, label, reason
 
 
-# ─────────────────────────────────────
+# 
 # 이미지
-# ─────────────────────────────────────
+# 
 def detect_image_from_bytes(jpeg_bytes: bytes) -> Dict[str, Any]:
     out = {
         "source": "bitmind_image",
@@ -156,7 +156,7 @@ def detect_image_from_bytes(jpeg_bytes: bytes) -> Dict[str, Any]:
 
     print("=== [BitMind DEBUG] DETECT IMAGE REQUEST ===")
     print(f"URL: {BITMIND_IMAGE_URL}")
-    print("===========================================")
+    print("===")
 
     try:
         r = requests.post(
@@ -172,7 +172,7 @@ def detect_image_from_bytes(jpeg_bytes: bytes) -> Dict[str, Any]:
         print("=== [BitMind DEBUG] IMAGE RESPONSE ===")
         print(f"Status: {r.status_code}")
         print(f"Raw: {raw}")
-        print("======================================")
+        print("===")
 
         if r.status_code < 400:
             score, label, reason = _extract_score_label(raw)
@@ -187,9 +187,9 @@ def detect_image_from_bytes(jpeg_bytes: bytes) -> Dict[str, Any]:
     return out
 
 
-# ─────────────────────────────────────
+# 
 # 비디오
-# ─────────────────────────────────────
+# 
 def detect_video_from_bytes(video_bytes: bytes) -> Dict[str, Any]:
     out = {
         "source": "bitmind_video",
@@ -227,7 +227,7 @@ def detect_video_from_bytes(video_bytes: bytes) -> Dict[str, Any]:
         print("=== [BitMind DEBUG] VIDEO RESPONSE ===")
         print(f"Status: {r.status_code}")
         print(f"Raw: {raw}")
-        print("======================================")
+        print("===")
 
         if r.status_code < 400:
             score, label, reason = _extract_score_label(raw)

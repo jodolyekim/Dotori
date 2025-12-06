@@ -47,9 +47,9 @@ def _ko_join_reasons(*reasons):
     return " / ".join(arr) if arr else None
 
 
-# -------------------------
+# 
 # TEXT (GPTZero)
-# -------------------------
+# 
 class DetectTextView(APIView):
     permission_classes = [AuthRequired]
 
@@ -87,9 +87,9 @@ class DetectTextView(APIView):
         })
 
 
-# -------------------------
+# 
 # IMAGE (Sightengine)
-# -------------------------
+# 
 class DetectImageView(APIView):
     permission_classes = [AuthRequired]
     parser_classes = [parsers.MultiPartParser, parsers.FormParser]
@@ -126,9 +126,9 @@ class DetectImageView(APIView):
             })
 
 
-# -------------------------
+# 
 # AUDIO (Aurigin 유지)
-# -------------------------
+# 
 class DetectAudioView(APIView):
     permission_classes = [AuthRequired]
     parser_classes = [parsers.MultiPartParser, parsers.FormParser]
@@ -176,9 +176,9 @@ class DetectAudioView(APIView):
             })
 
 
-# -------------------------
+# 
 # VIDEO (Sightengine)
-# -------------------------
+# 
 class DetectVideoView(APIView):
     permission_classes = [AuthRequired]
     parser_classes = [parsers.MultiPartParser, parsers.FormParser]

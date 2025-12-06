@@ -50,11 +50,11 @@ class MembershipStatsOverview(APIView):
         user = request.user
         today = timezone.localdate()
 
-        # ===== 멤버십 정보 =====
+        #  멤버십 정보 
         membership = get_or_create_membership(user)
         plan = membership.plan  # MembershipPlan 인스턴스
 
-        # ===== 오늘 사용량 조회 =====
+        #  오늘 사용량 조회 
         def get_usage(feature):
             usage = DailyUsage.objects.filter(
                 user=user,
@@ -82,7 +82,7 @@ class MembershipStatsOverview(APIView):
         detector_remaining = calc_remaining(detector_limit, detector_used)
         image_remaining = calc_remaining(image_limit, image_used)
 
-        # ===== 최근 7일 데이터 =====
+        #  최근 7일 데이터 
         dates = []
         summary_list = []
         detector_list = []
@@ -125,7 +125,7 @@ class MembershipStatsOverview(APIView):
             )
             point_list.append(sum(p.amount for p in pt))
 
-        # ===== 포인트 정보 =====
+        #  포인트 정보 
         wallet = get_wallet(user)
 
         today_point_tx = PointTransaction.objects.filter(
@@ -138,16 +138,16 @@ class MembershipStatsOverview(APIView):
         # 요금제에 설정된 일일 포인트 상한
         daily_cap = plan.point_daily_cap or 0
 
-        # ===== 최종 응답 =====
+        #  최종 응답 
         return Response({
-            # --- 멤버십 요약 ---
+            #  멤버십 요약 
             "membership": {
                 "plan_code": plan.code,
                 "plan_name": plan.name,
                 "expires_at": membership.expires_at,
             },
 
-            # --- (하위 호환용) 오늘 사용량 원본 ---
+            #  (하위 호환용) 오늘 사용량 원본 
             "usage_today": {
                 "summary_used": summary_used,
                 "summary_limit": summary_limit,
@@ -157,7 +157,7 @@ class MembershipStatsOverview(APIView):
                 "image_limit": image_limit,
             },
 
-            # --- (하위 호환용) 최근 7일 원본 ---
+            #  (하위 호환용) 최근 7일 원본 
             "usage_last_7_days": {
                 "dates": dates,
                 "summary": summary_list,
@@ -165,7 +165,7 @@ class MembershipStatsOverview(APIView):
                 "image": image_list,
             },
 
-            # --- Flutter MembershipOverviewScreen 이 직접 쓰는 형식 ---
+            #  Flutter MembershipOverviewScreen 이 직접 쓰는 형식 
             "summary": {
                 "limit": summary_limit,
                 "used": summary_used,

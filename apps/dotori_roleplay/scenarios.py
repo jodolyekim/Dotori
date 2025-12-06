@@ -14,7 +14,7 @@ class RoleplayScenario:
 
 
 SCENARIOS: Dict[str, RoleplayScenario] = {
-    # 1) 기존 시나리오들 -------------------------------
+    # 1) 기존 시나리오들 -
     "friend_fell": RoleplayScenario(
         code="friend_fell",
         title="친구가 넘어졌을 때",
@@ -46,7 +46,7 @@ SCENARIOS: Dict[str, RoleplayScenario] = {
         tags=["질문하기", "일상생활", "부탁하기"],
     ),
 
-    # 2) 새 시나리오들 -------------------------------
+    # 2) 새 시나리오들 -
     "school_group_presentation": RoleplayScenario(
         code="school_group_presentation",
         title="조별 과제에서 의견 말하기",

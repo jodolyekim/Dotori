@@ -1,5 +1,5 @@
-OS º¼·ý¿¡ ´ëÇÑ Æú´õ °æ·ÎÀÇ ¸ñ·ÏÀÔ´Ï´Ù.
-º¼·ý ÀÏ·Ã ¹øÈ£´Â 78B6-F5A1ÀÔ´Ï´Ù.
+OS ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½ ï¿½ï¿½È£ï¿½ï¿½ 78B6-F5A1ï¿½Ô´Ï´ï¿½.
 C:.
 |   .env
 |   .gitignore
@@ -11,7 +11,7 @@ C:.
 |   README.md
 |   requirements.txt
 |   
-+---.history
++.history
 |   |   .env_20251111170337
 |   |   .env_20251111170441
 |   |   .env_20251111170639
@@ -39,8 +39,8 @@ C:.
 |   |   .env_20251203222737
 |   |   .env_20251203222826
 |   |   
-|   +---apps
-|   |   +---dotori_accounts
+|   +apps
+|   |   +dotori_accounts
 |   |   |       jwt_views_20251202153753.py
 |   |   |       jwt_views_20251202153758.py
 |   |   |       jwt_views_20251202154239.py
@@ -72,7 +72,7 @@ C:.
 |   |   |       views_20251202155035.py
 |   |   |       views_20251202155613.py
 |   |   |       
-|   |   +---dotori_detector
+|   |   +dotori_detector
 |   |   |       bitmind_client_20251203193715.py
 |   |   |       bitmind_client_20251203193730.py
 |   |   |       bitmind_client_20251203203350.py
@@ -155,7 +155,7 @@ C:.
 |   |   |       __init___20251111174430.py
 |   |   |       __init___20251111233653.py
 |   |   |       
-|   |   +---dotori_memberships
+|   |   +dotori_memberships
 |   |   |       apps_20251201224812.py
 |   |   |       apps_20251201225357.py
 |   |   |       models_20251201224812.py
@@ -197,7 +197,7 @@ C:.
 |   |   |       __init___20251201224812.py
 |   |   |       __init___20251202152416.py
 |   |   |       
-|   |   +---dotori_quizzes
+|   |   +dotori_quizzes
 |   |   |   |   admin_20251112001707.py
 |   |   |   |   admin_20251112003750.py
 |   |   |   |   models_20251003135123.py
@@ -223,7 +223,7 @@ C:.
 |   |   |   |   views_20251202155527.py
 |   |   |   |   views_20251202155547.py
 |   |   |   |   
-|   |   |   +---fixtures
+|   |   |   +fixtures
 |   |   |   |       quizzes_seed_20251112002019.json
 |   |   |   |       quizzes_seed_20251112003750.json
 |   |   |   |       quizzes_seed_20251112012736.json
@@ -235,16 +235,16 @@ C:.
 |   |   |   |       quizzes_seed_20251112021342.json
 |   |   |   |       quizzes_seed_20251112021834.json
 |   |   |   |       
-|   |   |   +---management
-|   |   |   |   \---commands
+|   |   |   +management
+|   |   |   |   \commands
 |   |   |   |           seed_quizzes_20251112002102.py
 |   |   |   |           seed_quizzes_20251112002144.py
 |   |   |   |           
-|   |   |   \---tests
+|   |   |   \tests
 |   |   |           test_quizzes_api_20251112002202.py
 |   |   |           test_quizzes_api_20251112002207.py
 |   |   |           
-|   |   +---dotori_roleplay
+|   |   +dotori_roleplay
 |   |   |       models_20251201124328.py
 |   |   |       models_20251201124333.py
 |   |   |       scenarios_20251201122226.py
@@ -264,7 +264,7 @@ C:.
 |   |   |       views_20251202173107.py
 |   |   |       views_20251202174517.py
 |   |   |       
-|   |   \---dotori_summaries
+|   |   \dotori_summaries
 |   |           serializers_20251111163218.py
 |   |           serializers_20251202224946.py
 |   |           serializers_20251202230425.py
@@ -297,7 +297,7 @@ C:.
 |   |           views_20251203005041.py
 |   |           views_20251203005550.py
 |   |           
-|   +---dotori_core
+|   +dotori_core
 |   |       settings_20251110214816.py
 |   |       settings_20251111190353.py
 |   |       settings_20251112003750.py
@@ -313,7 +313,7 @@ C:.
 |   |       urls_20251202153812.py
 |   |       urls_20251202153914.py
 |   |       
-|   \---dotori_roleplay
+|   \dotori_roleplay
 |           apps_20251201122146.py
 |           apps_20251201122157.py
 |           openai_client_20251201122113.py
@@ -329,8 +329,8 @@ C:.
 |           __init___20251201122055.py
 |           __init___20251201122221.py
 |           
-+---apps
-|   +---dotori_accounts
++apps
+|   +dotori_accounts
 |   |   |   jwt_views.py
 |   |   |   models.py
 |   |   |   serializers.py
@@ -338,21 +338,21 @@ C:.
 |   |   |   views.py
 |   |   |   __init__.py
 |   |   |   
-|   |   +---migrations
+|   |   +migrations
 |   |   |   |   0001_initial.py
 |   |   |   |   0002_profile_phone_phoneverification.py
 |   |   |   |   0003_profile_accessible_mode_profile_difficulty_level_and_more.py
 |   |   |   |   0004_remove_profile_accessible_mode_and_more.py
 |   |   |   |   __init__.py
 |   |   |   |   
-|   |   |   \---__pycache__
+|   |   |   \__pycache__
 |   |   |           0001_initial.cpython-313.pyc
 |   |   |           0002_profile_phone_phoneverification.cpython-313.pyc
 |   |   |           0003_profile_accessible_mode_profile_difficulty_level_and_more.cpython-313.pyc
 |   |   |           0004_remove_profile_accessible_mode_and_more.cpython-313.pyc
 |   |   |           __init__.cpython-313.pyc
 |   |   |           
-|   |   \---__pycache__
+|   |   \__pycache__
 |   |           jwt_views.cpython-313.pyc
 |   |           models.cpython-313.pyc
 |   |           serializers.cpython-313.pyc
@@ -360,14 +360,14 @@ C:.
 |   |           views.cpython-313.pyc
 |   |           __init__.cpython-313.pyc
 |   |           
-|   +---dotori_common
+|   +dotori_common
 |   |   |   utils.py
 |   |   |   __init__.py
 |   |   |   
-|   |   \---__pycache__
+|   |   \__pycache__
 |   |           __init__.cpython-313.pyc
 |   |           
-|   +---dotori_detector
+|   +dotori_detector
 |   |   |   bitmind_client.py
 |   |   |   hf_client.py
 |   |   |   urls.py
@@ -378,7 +378,7 @@ C:.
 |   |   |   views.py
 |   |   |   __init__.py
 |   |   |   
-|   |   \---__pycache__
+|   |   \__pycache__
 |   |           bitmind_client.cpython-313.pyc
 |   |           hf_client.cpython-313.pyc
 |   |           urls.cpython-313.pyc
@@ -389,21 +389,21 @@ C:.
 |   |           views.cpython-313.pyc
 |   |           __init__.cpython-313.pyc
 |   |           
-|   +---dotori_documents
+|   +dotori_documents
 |   |   |   models.py
 |   |   |   serializers.py
 |   |   |   urls.py
 |   |   |   views.py
 |   |   |   __init__.py
 |   |   |   
-|   |   \---__pycache__
+|   |   \__pycache__
 |   |           models.cpython-313.pyc
 |   |           serializers.cpython-313.pyc
 |   |           urls.cpython-313.pyc
 |   |           views.cpython-313.pyc
 |   |           __init__.cpython-313.pyc
 |   |           
-|   +---dotori_memberships
+|   +dotori_memberships
 |   |   |   apps.py
 |   |   |   exceptions.py
 |   |   |   models.py
@@ -417,21 +417,21 @@ C:.
 |   |   |   views_stats.py
 |   |   |   __init__.py
 |   |   |   
-|   |   +---migrations
+|   |   +migrations
 |   |   |   |   0001_initial.py
 |   |   |   |   0002_remove_paymenttransaction_pg_provider_and_more.py
 |   |   |   |   0003_quizattemptlog_summarydetaillog_userloginlog.py
 |   |   |   |   0004_roleplaylog.py
 |   |   |   |   __init__.py
 |   |   |   |   
-|   |   |   \---__pycache__
+|   |   |   \__pycache__
 |   |   |           0001_initial.cpython-313.pyc
 |   |   |           0002_remove_paymenttransaction_pg_provider_and_more.cpython-313.pyc
 |   |   |           0003_quizattemptlog_summarydetaillog_userloginlog.cpython-313.pyc
 |   |   |           0004_roleplaylog.cpython-313.pyc
 |   |   |           __init__.cpython-313.pyc
 |   |   |           
-|   |   \---__pycache__
+|   |   \__pycache__
 |   |           apps.cpython-313.pyc
 |   |           exceptions.cpython-313.pyc
 |   |           models.cpython-313.pyc
@@ -444,7 +444,7 @@ C:.
 |   |           views_analytics.cpython-313.pyc
 |   |           __init__.cpython-313.pyc
 |   |           
-|   +---dotori_quizzes
+|   +dotori_quizzes
 |   |   |   admin.py
 |   |   |   consumers.py
 |   |   |   models.py
@@ -455,31 +455,31 @@ C:.
 |   |   |   views.py
 |   |   |   __init__.py
 |   |   |   
-|   |   +---fixtures
+|   |   +fixtures
 |   |   |       quizzes_seed.json
 |   |   |       
-|   |   +---management
+|   |   +management
 |   |   |   |   __init__.py
 |   |   |   |   
-|   |   |   +---commands
+|   |   |   +commands
 |   |   |   |       seed_quizzes.py
 |   |   |   |       __init__.py
 |   |   |   |       
-|   |   |   \---__pycache__
+|   |   |   \__pycache__
 |   |   |           __init__.cpython-313.pyc
 |   |   |           
-|   |   +---migrations
+|   |   +migrations
 |   |   |   |   0001_initial.py
 |   |   |   |   __init__.py
 |   |   |   |   
-|   |   |   \---__pycache__
+|   |   |   \__pycache__
 |   |   |           0001_initial.cpython-313.pyc
 |   |   |           __init__.cpython-313.pyc
 |   |   |           
-|   |   +---tests
+|   |   +tests
 |   |   |       test_quizzes_api.py
 |   |   |       
-|   |   \---__pycache__
+|   |   \__pycache__
 |   |           admin.cpython-313.pyc
 |   |           consumers.cpython-313.pyc
 |   |           models.cpython-313.pyc
@@ -490,7 +490,7 @@ C:.
 |   |           views.cpython-313.pyc
 |   |           __init__.cpython-313.pyc
 |   |           
-|   +---dotori_roleplay
+|   +dotori_roleplay
 |   |   |   apps.py
 |   |   |   models.py
 |   |   |   openai_client.py
@@ -500,15 +500,15 @@ C:.
 |   |   |   views.py
 |   |   |   __init__.py
 |   |   |   
-|   |   +---migrations
+|   |   +migrations
 |   |   |   |   0001_initial.py
 |   |   |   |   __init__.py
 |   |   |   |   
-|   |   |   \---__pycache__
+|   |   |   \__pycache__
 |   |   |           0001_initial.cpython-313.pyc
 |   |   |           __init__.cpython-313.pyc
 |   |   |           
-|   |   \---__pycache__
+|   |   \__pycache__
 |   |           apps.cpython-313.pyc
 |   |           models.cpython-313.pyc
 |   |           openai_client.cpython-313.pyc
@@ -518,7 +518,7 @@ C:.
 |   |           views.cpython-313.pyc
 |   |           __init__.cpython-313.pyc
 |   |           
-|   \---dotori_summaries
+|   \dotori_summaries
 |       |   models.py
 |       |   serializers.py
 |       |   tasks.py
@@ -529,7 +529,7 @@ C:.
 |       |   views.py
 |       |   __init__.py
 |       |   
-|       \---__pycache__
+|       \__pycache__
 |               models.cpython-313.pyc
 |               serializers.cpython-313.pyc
 |               urls.cpython-313.pyc
@@ -539,7 +539,7 @@ C:.
 |               views.cpython-313.pyc
 |               __init__.cpython-313.pyc
 |               
-+---dotori_core
++dotori_core
 |   |   asgi.py
 |   |   celery.py
 |   |   middleware.py
@@ -548,7 +548,7 @@ C:.
 |   |   urls.py
 |   |   __init__.py
 |   |   
-|   \---__pycache__
+|   \__pycache__
 |           asgi.cpython-313.pyc
 |           celery.cpython-313.pyc
 |           middleware.cpython-313.pyc
@@ -557,8 +557,8 @@ C:.
 |           urls.cpython-313.pyc
 |           __init__.cpython-313.pyc
 |           
-+---media
-|   +---ai_images
++media
+|   +ai_images
 |   |       001ebd598d7b44c981e109d638fef0d1.png
 |   |       003c867a5ba844ceace5ee4f97a2c752.png
 |   |       03439f565ef9459294213860af24b70d.png
@@ -621,15 +621,15 @@ C:.
 |   |       f6620ee4bc4e4201b7f42ca88bd0a047.png
 |   |       placeholder.png
 |   |       
-|   +---profiles
+|   +profiles
 |   |       profile.jpg
 |   |       
-|   \---quizzes
+|   \quizzes
 |           eating.jpg
 |           helping.jpg
 |           running.jpg
 |           smiling.jpg
 |           
-\---templates
+\templates
         index.html
         

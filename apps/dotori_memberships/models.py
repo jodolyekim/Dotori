@@ -149,7 +149,7 @@ class PaymentTransaction(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 
-# 🔥 분석 전용 모델들(SummaryDetailLog, QuizAttemptLog, UserLoginLog, RoleplayLog 등)
+#  분석 전용 모델들(SummaryDetailLog, QuizAttemptLog, UserLoginLog, RoleplayLog 등)
 #    models_analytics.py 에 정의되어 있고, 여기서 import 해서
 #    Django가 "이 앱의 모델"로 인식하게 만든다.
 from .models_analytics import *  # noqa

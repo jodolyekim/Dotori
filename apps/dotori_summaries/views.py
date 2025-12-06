@@ -57,7 +57,7 @@ class SummarizeAPI(APIView):
     응답 형식:
     {
       "summary": "...",
-      "vocabulary": [   # 🔥 Flutter와 맞추기 위해 키 이름을 vocabulary 로 통일
+      "vocabulary": [   #  Flutter와 맞추기 위해 키 이름을 vocabulary 로 통일
         {
           "word": "자본시장법",
           "meaning": "일반적인 뜻",
@@ -117,34 +117,34 @@ class SummarizeAPI(APIView):
         else:
             final_summary = generate_summary(used_text, difficulty)
 
-        # -------------------------------------------------
+    
         # 어려운 단어 + 쉬운 설명
-        # -------------------------------------------------
+    
         try:
             vocabulary = extract_vocabulary_explained(final_summary, difficulty)
         except Exception as e:
             log.warning("[SummarizeAPI] vocabulary_explained 실패: %s", e)
             vocabulary = []
 
-        # -------------------------------------------------
+    
         # 액션 아이템
-        # -------------------------------------------------
+    
         try:
             actions = extract_actions(final_summary)
         except Exception:
             actions = []
 
-        # -------------------------------------------------
+    
         # 문서 유형
-        # -------------------------------------------------
+    
         try:
             detected_type = detect_doc_type(final_summary)
         except Exception:
             detected_type = doc_hint or ""
 
-        # -------------------------------------------------
+    
         # meta
-        # -------------------------------------------------
+    
         summary_len = len(final_summary)
         meta = {
             "original_length": original_len,
@@ -154,9 +154,9 @@ class SummarizeAPI(APIView):
             "input_type_detected": detected_type,
         }
 
-        # -------------------------------------------------
+    
         # DailyUsage 기록
-        # -------------------------------------------------
+    
         if request.user.is_authenticated:
             from django.utils import timezone
 
@@ -175,9 +175,7 @@ class SummarizeAPI(APIView):
             obj.used_count += 1
             obj.save()
 
-        # -------------------------------------------------
         # SummaryDetailLog 기록
-        # -------------------------------------------------
         try:
             if request.user.is_authenticated:
                 SummaryDetailLog.objects.create(
@@ -192,7 +190,7 @@ class SummarizeAPI(APIView):
         return Response(
             {
                 "summary": final_summary,
-                "vocabulary": vocabulary,   # 🔥 여기 이름이 Flutter와 1:1 매칭
+                "vocabulary": vocabulary,   #  여기 이름이 Flutter와 1:1 매칭
                 "actions": actions,
                 "meta": meta,
             },

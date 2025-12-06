@@ -32,9 +32,9 @@ class IsAuth(permissions.IsAuthenticated):
     pass
 
 
-# ===========================================
+=
 #   요금제 목록 조회
-# ===========================================
+=
 class MembershipPlanListView(generics.ListAPIView):
     permission_classes = [IsAuth]
     serializer_class = MembershipPlanSerializer
@@ -45,9 +45,9 @@ class MembershipPlanListView(generics.ListAPIView):
         )
 
 
-# ===========================================
+=
 #   내 멤버십 조회
-# ===========================================
+=
 class MyMembershipView(APIView):
     permission_classes = [IsAuth]
 
@@ -56,9 +56,9 @@ class MyMembershipView(APIView):
         return Response(UserMembershipSerializer(membership).data)
 
 
-# ===========================================
+=
 #   포인트 잔액 조회
-# ===========================================
+=
 class PointSummaryView(APIView):
     permission_classes = [IsAuth]
 
@@ -67,9 +67,9 @@ class PointSummaryView(APIView):
         return Response(PointWalletSerializer(wallet).data)
 
 
-# ===========================================
+=
 #   포인트 사용/적립 내역 조회
-# ===========================================
+=
 class PointHistoryView(generics.ListAPIView):
     permission_classes = [IsAuth]
     serializer_class = PointTransactionSerializer
@@ -81,9 +81,9 @@ class PointHistoryView(generics.ListAPIView):
         )
 
 
-# ===========================================
+=
 #   멤버십 결제 (가짜 PG)
-# ===========================================
+=
 class SubscribeMembershipView(APIView):
     """
     멤버십 구독 / 변경 API
@@ -113,7 +113,7 @@ class SubscribeMembershipView(APIView):
         if not plan_code:
             return Response({"detail": "plan_code is required"}, status=400)
 
-        # ===== 요금제 조회 =====
+        #  요금제 조회 
         try:
             plan = MembershipPlan.objects.get(code=plan_code, is_active=True)
         except MembershipPlan.DoesNotExist:
@@ -121,7 +121,7 @@ class SubscribeMembershipView(APIView):
 
         amount_total = max(plan.price_monthly, 0)
 
-        # ===== 포인트 사용 =====
+        #  포인트 사용 
         if point_to_use < 0:
             point_to_use = 0
         if point_to_use > amount_total:
@@ -140,7 +140,7 @@ class SubscribeMembershipView(APIView):
 
         amount_paid_cash = amount_total - point_to_use
 
-        # ===== 결제 내역 생성 (PG 없음 → 즉시 성공) =====
+        #  결제 내역 생성 (PG 없음 → 즉시 성공) 
         payment = PaymentTransaction.objects.create(
             user=user,
             plan=plan,
@@ -151,7 +151,7 @@ class SubscribeMembershipView(APIView):
             status=PaymentTransaction.STATUS_SUCCESS,
         )
 
-        # ===== 멤버십 업데이트 =====
+        #  멤버십 업데이트 
         membership = get_or_create_membership(user)
         membership.plan = plan
         membership.is_active = True
@@ -173,10 +173,10 @@ class SubscribeMembershipView(APIView):
         )
 
 
-# ===========================================
+
 #   사용량 통계(overview)
 #   /api/memberships/stats/overview/
-# ===========================================
+
 class MembershipUsageOverviewView(APIView):
     """
     오늘 기준 사용량 + 포인트 요약
@@ -247,10 +247,9 @@ class MembershipUsageOverviewView(APIView):
         )
 
 
-# ===========================================
 #   기능 사용 consume API
 #   /api/memberships/consume/<feature_type>/
-# ===========================================
+
 class FeatureConsumeView(APIView):
     """
     SUMMARY / IMAGE / DETECTOR 기능 사용 1회 소모

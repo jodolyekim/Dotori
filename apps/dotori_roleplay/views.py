@@ -10,7 +10,7 @@ from apps.dotori_summaries.utils_openai import (
     openai_chat_response,
     SUMMARY_MODEL,
 )
-from apps.dotori_memberships.models_analytics import RoleplayLog  # 🔥 분석용 로그 모델
+from apps.dotori_memberships.models_analytics import RoleplayLog  #  분석용 로그 모델
 
 
 def _build_system_prompt(scenario) -> str:
@@ -19,8 +19,8 @@ def _build_system_prompt(scenario) -> str:
 “역할극 전문 AI 코치 + 상대역 배우”이다.
 항상 한국어·존댓말로만 말한다.
 
-────────────────────────
-📌 [역할 설정 – 매우 중요]
+
+ [역할 설정 – 매우 중요]
 - 사용자는 시나리오 속 ‘나’(손님, 친구, 학생 등)를 연기한다.
 - 너는 시나리오 속 ‘상대방’을 전문 배우처럼 연기하며 자연스럽게 반응한다.
 
@@ -41,8 +41,8 @@ assistant_reply를 생성할 때는 다음을 반드시 지켜라:
    - 설명, 조언, 예시 문장, 코칭 문장 제외
    - 현실적 대사 1~3문장만
 
-────────────────────────
-📌 [코칭 규칙]
+
+ [코칭 규칙]
 
 coach_comment:
 - 사용자의 발화를 평가하되 “1문장”만
@@ -52,8 +52,8 @@ suggested_next_action:
 - 현재 시나리오 + 사용자의 마지막 발화 + assistant_reply를 기반으로 **직접 이어질 수 있는 한 문장**만 제안
 - 시나리오와 무관한 제안 절대 금지
 
-────────────────────────
-📌 [시나리오 정보]
+
+ [시나리오 정보]
 제목: {scenario.title}
 상황 설명: {scenario.description}
 연습 목표: {scenario.goal}
@@ -61,8 +61,8 @@ suggested_next_action:
 
 이 내용을 기반으로, 상황을 매우 정확히 이해하고 유지해야 한다.
 
-────────────────────────
-📌 [출력 형식 – 반드시 지켜라]
+
+ [출력 형식 – 반드시 지켜라]
 아래 JSON 외 그 어떤 텍스트도 출력하지 마라.
 
 {{
@@ -107,7 +107,7 @@ class RoleplayChatView(APIView):
       - coach_comment
       - suggested_next_action
     """
-    permission_classes = [AllowAny]  # 🔥 비로그인도 사용 가능하되, 로그는 로그인 유저만
+    permission_classes = [AllowAny]  #  비로그인도 사용 가능하되, 로그는 로그인 유저만
 
     def post(self, request):
         scenario_code = request.data.get("scenario_code")
@@ -165,7 +165,7 @@ class RoleplayChatView(APIView):
         if not assistant_reply:
             assistant_reply = "죄송해요, 이번에는 적절한 답변을 만들지 못했어요. 다시 한 번 말씀해 주실래요?"
 
-        # 🔥 롤플레잉 사용 로그 저장 (로그인 유저만)
+        #  롤플레잉 사용 로그 저장 (로그인 유저만)
         auth_header = request.META.get("HTTP_AUTHORIZATION", "")
 
         if request.user.is_authenticated:
